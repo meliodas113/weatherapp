@@ -9,7 +9,6 @@ class Wheather extends React.Component {
     };
   }
   render() {
-    const { src } = this.state;
     return (
       <div className="actual-content">
         {this.props.city && this.props.country && (
@@ -20,7 +19,7 @@ class Wheather extends React.Component {
         {this.props.temprature && <p>Temprature: {this.props.temprature}</p>}
         {this.props.humidity && <p>Humidity: {this.props.humidity}</p>}
         {this.props.description && <p>Conditions: {this.props.description}</p>}
-        {this.props.icon && <img src={src + ".png"} alt="-" />}
+        {this.props.icon && <img src={this.Statesrc + ".png"} alt="-" />}
         {this.props.error && <p>{this.props.error}</p>}
       </div>
     );
